@@ -1,6 +1,6 @@
-# KRYPTOBOOKZ
+# COZMOSPAZE
 
-LINK: https://netcinematics.github.io/KRYPTOBOOKZ/
+LINK: https://netcinematics.github.io/COZMOSPAZE/
 
 ## PURPOSE:
 
@@ -11,7 +11,8 @@ LINK: https://netcinematics.github.io/KRYPTOBOOKZ/
 The vision is for NFTs as unique pages of a PICTURE~BOOK.
 Where every component is an NFT. Not just the PAGE.
 Also the TITLE PAGE as a PROMO. The SNDTRACK.
-So we need a STRUCTURE for this, and a CONTRACT.
+And VIDEO.
+
 
 And a few important TRICKY CHARACTERISTICS.
 The BEHAVIOR needs to be:
@@ -105,14 +106,6 @@ A Render Loop, checking the 9GRID for every EPIC-BIT.
 - autoTIME: 10
 2  
 
-
-### TODO
-- MOVED ALL the KRYPTOBOOK logic to Web3 KRYPTORENDERER.
-- TEST cheaper GAS: Maps or Structs.
-- TEST proxy for SERIES extensible []...
-- TEST solution for REPLACEABLE [...]
-- TEST direct script to blockchain (infura)
-
 ### INNOVATIONS
 > CHALLENGE: NFTs as pages of a BOOK. 
 - SOLUTION: Web3:METANET. 
@@ -157,5 +150,5 @@ A Render Loop, checking the 9GRID for every EPIC-BIT.
 ----
 ### NETCINEMATICS
 2021-2022(c) NetCinematics llc.
-KRYPTOBOOKZ(tm), KRYPTOSPAZE(tm)
+COZMOSPAZE(tm), KRYPTOBOOKZ(tm)
 CryptoBooks is assumed PUBLIC DOMAIN 2022
