@@ -298,57 +298,10 @@ function createKRYPTO_PAGE(bitz, pgNum, pgTotal){
         imgCard1.style.maxWidth = "444px";          //RESPONSIVE
         // imgCard1.style.marginBottom = "-6.666em" //CROP
         imgCard1.addEventListener("click", ()=> {
-            // imgCard1.showDetails = (imgCard1.showDetails) ? 0 : 1;
-            // if(imgCard1.showDetails){
-            //     imgCard1.style.marginBottom = "2.222em"
-            // }else{
-            //     imgCard1.style.marginBottom = "-6.666em"
-            // }
+
         })
     } 
 
-    // var TXTBIT = 0;
-    // if(bitz.TXT){
-    //     TXTBIT = document.createElement('article');
-    //     TXTBIT.style.backgroundColor = 'black';
-    //     // TXTBIT.style.backgroundColor = getRandoColor();
-    //     TXTBIT.style.boxShadow = "0px 0px 20px 1px blue"
-    //     TXTBIT.style.border = "1px solid purple"
-    //     TXTBIT.style.borderRadius = "13px"
-    //     TXTBIT.style.padding = "0.888em"
-    //     TXTBIT.style.margin = "0.88em auto"
-    //     TXTBIT.style.maxWidth = "42em"
-    //     TXTBIT.style.cursor = "pointer"
-    //     TXTBIT.style.overflow = "hidden";     //CROP
-    //     TXTBIT.style.marginBottom = "1em";   //CROP
-    //     TXTBIT.style.marginTop = "-6em";    //OVERLAP
-    //     TXTBIT.style.borderTop = "none";    //OVERLAP
-    // } else { //no btz.TXT
-        // pageFrame.style.marginTop="6.666em";  //no txt padding
-        // pageFrame.style.marginBottom="6.666em"; //no txt padding
-    // }
-
-    // var txtCard2 = 0;
-    // if(bitz.TXT){
-    //     txtCard2 = document.createElement('img'); //IMG  //OTHER IMAGE TYPES HERE
-    //     txtCard2.src = bitz.TXT; //large 600 size
-    //     txtCard2.style.width = "100%"
-    //     txtCard2.style.maxWidth = "32em"
-    //     // txtCard2.style.boxShadow = `2px 2px 8px 4px ${getRandoColor()}`
-    //     txtCard2.style.boxShadow = "inset rgb(30 84 200) 2px 2px 14px 8px"
-    //     txtCard2.style.borderRadius = "18px"
-    //     // txtCard2.style.marginBottom = "-6em"
-    //     txtCard2.style.marginBottom = "-5.666em"
-    //     txtCard2.style.marginTop = "3em"
-    //     txtCard2.addEventListener("click", ()=> {
-    //         txtCard2.showDetails = (txtCard2.showDetails) ? 0 : 1;
-    //         if(txtCard2.showDetails){
-    //             txtCard2.style.marginBottom = "0em"
-    //         }else{
-    //             txtCard2.style.marginBottom = "-5.666em"
-    //         }
-    //     })
-    // } 
     //TODO Logic to add remove PAGE_SPACER, title page somehow...   
     if (KRYPTOBOOKFrame1) { KRYPTOBOOKFrame1.insertAdjacentElement('beforeend', pageSpacer); }
     // if (pageFrame && pageCard) { pageFrame.insertAdjacentElement('beforeend', pageCard); }
@@ -433,7 +386,8 @@ function create_UTOOB_VIEW(){ // show ALL YOUTUBE VIDS
         },
         { title: 'OrbyOrbot ORIGIN~STORY',
             IMGPATH:'./copyrightNetCinematics/KRYPTOVIDZ/originz_TITLEBIT1.png',
-            UTOOBZ: `<iframe width="100%" height="315" src="https://www.youtube.com/embed/i9MpeCOyIH0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`,
+            IMGLINKPATH:'s1.e1',
+            // UTOOBZ: `<iframe width="100%" height="315" src="https://www.youtube.com/embed/i9MpeCOyIH0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`,
             sNUM:0, eNUM:0,mainTTL:'COZMOSPAZE!',subTTL:'Virtual~Wurldz...',
             INFO:'EDM MUSIC VIDEO | COZMOZPAZE | promo 0',
             TXT_ML:'abc 123 ...',
@@ -548,6 +502,11 @@ function create_META_VIEW(ViewData){ //BUILD METACARD DISPLAY - for MANY types o
         metaCardIMG.src = ViewData.IMGPATH; 
         metaCardIMG.addEventListener("click", ()=> {
             stopAllVideos();
+            if( ViewData.IMGLINKPATH ){
+                // let CID = 's1.e1' //todo make dynamic
+                loadBOOKDisplay(ViewData.IMGLINKPATH);
+                return;
+            }
             if(ViewData.UTOOBZ){ //VID
                 if(metaCardIMG.style.width === "100%"){
                     metaCardIMG.style.width = "44%"

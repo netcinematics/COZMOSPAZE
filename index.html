@@ -460,13 +460,12 @@ let galleryBOOKClick  = function(e){
 
     let tgtContent = e.currentTarget.id
     clearAllDisplays();
-    
     //Click ID to LINKPATH - with cID to METANET, from vis. 
     // let LINKPATH = [{cID:'s1.e1.img1'},{cID:'s1.e1.txt1'}];
     
     //TODO get LINKPATH from METANET.
     // let LINKPATH = {bID:'s1.e1.ch1'};
-    let CID = 's1.e1'
+    let CID = 's1.e1' //todo make dynamic
     loadBOOKDisplay(CID);
 }
 
@@ -489,7 +488,6 @@ let galleryINFOClick  = function(e){ //called on FRAME, play will trigger this.
 let galleryPlayClick = function(e,CID){
     let tgtContent = e.currentTarget.id
     clearAllDisplays();
-    
     //Click ID to LINKPATH - with cID to METANET, from vis. 
     // let LINKPATH = [{cID:'s1.e1.img1'},{cID:'s1.e1.txt1'}];
     
