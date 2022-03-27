@@ -410,21 +410,21 @@ function create_UTOOB_VIEW(){ // show ALL YOUTUBE VIDS
         },
         { title: 'NORTH~CRATER~LAKE',
             IMGPATH:'./copyrightNetCinematics/KRYPTOVIDZ/img2.png',
-            UTOOBZ: `<iframe width="100%" height="315" src="https://www.youtube.com/embed/i9MpeCOyIH0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`,
+            UTOOBZ: `<iframe width="100%" src="https://www.youtube.com/embed/l4pfJpzGE4M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`,
             sNUM:0, eNUM:0,mainTTL:'COZMOSPAZE!',subTTL:'Virtual~Wurldz...',
             INFO:'EDM MUSIC VIDEO | COZMOZPAZE | promo 0',
             id:'0.0.4'
         },
         { title: 'SPAZE~CRASH!',
             IMGPATH:'./copyrightNetCinematics/KRYPTOVIDZ/img3.png',
-            UTOOBZ: `<iframe width="100%" height="315" src="https://www.youtube.com/embed/i9MpeCOyIH0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`,
+            UTOOBZ: `<iframe width="100%" src="https://www.youtube.com/embed/kAZATuX1w-E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`,
             sNUM:0, eNUM:0,mainTTL:'COZMOSPAZE!',subTTL:'Virtual~Wurldz...',
             INFO:'EDM MUSIC VIDEO | COZMOZPAZE | promo 0',
             id:'0.0.5'
         },
         { title: 'SANDSTORM on MARZAMOON',
             IMGPATH:'./copyrightNetCinematics/KRYPTOVIDZ/img4.png',
-            UTOOBZ: `<iframe width="100%" height="315" src="https://www.youtube.com/embed/i9MpeCOyIH0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`,
+            UTOOBZ: `<iframe width="100%" src="https://www.youtube.com/embed/PxQqCfMEQKM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`,
             sNUM:0, eNUM:0,mainTTL:'COZMOSPAZE!',subTTL:'Virtual~Wurldz...',
             INFO:'EDM MUSIC VIDEO | COZMOZPAZE | promo 0',
             id:'0.0.5'
@@ -438,7 +438,7 @@ function create_UTOOB_VIEW(){ // show ALL YOUTUBE VIDS
         },
         { title: 'Into EAST~DUNE~SEA',
             IMGPATH:'./copyrightNetCinematics/KRYPTOVIDZ/img6.png',
-            UTOOBZ: `<iframe width="100%" height="315" src="https://www.youtube.com/embed/i9MpeCOyIH0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`,
+            UTOOBZ: `<iframe width="100%" height="315" src="https://www.youtube.com/embed/M1-hZgIlAkc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`,
             sNUM:0, eNUM:0,mainTTL:'COZMOSPAZE!',subTTL:'Virtual~Wurldz...',
             INFO:'EDM MUSIC VIDEO | COZMOZPAZE | promo 0',
             id:'0.0.7'
@@ -474,7 +474,7 @@ function create_ITEM_VIEW(itemIDX){ // show individual ITEM.
     kbz.MainVw.item_idx = null; //reset menu to work
 
 } //end create item view
-function create_META_VIEW(BookData){ //BUILD METACARD DISPLAY
+function create_META_VIEW(ViewData){ //BUILD METACARD DISPLAY - for MANY types of display.
         let metaFrame = document.createElement('section');
         metaFrame.style.backgroundColor = 'black';
         metaFrame.style.borderRadius = "10px";
@@ -492,7 +492,7 @@ function create_META_VIEW(BookData){ //BUILD METACARD DISPLAY
         let metaCardIMG = document.createElement('img'); //IMG
         metaCardIMG.style.padding = "0.888em"
         metaCardIMG.style.width = "88.8%"
-        if(BookData.UTOOBZ){ //VID
+        if(ViewData.UTOOBZ){ //VID
             metaCardIMG.style.width = "44%"
         }
         metaCardIMG.style.maxWidth = "33em"
@@ -501,10 +501,10 @@ function create_META_VIEW(BookData){ //BUILD METACARD DISPLAY
         metaCardIMG.style.marginBottom = "1em"
         metaCardIMG.style.cursor = 'pointer'
         metaCardIMG.style.zIndex = "9"
-        metaCardIMG.src = BookData.IMGPATH; 
+        metaCardIMG.src = ViewData.IMGPATH; 
         metaCardIMG.addEventListener("click", ()=> {
             stopAllVideos();
-            if(BookData.UTOOBZ){ //VID
+            if(ViewData.UTOOBZ){ //VID
                 if(metaCardIMG.style.width === "100%"){
                     metaCardIMG.style.width = "44%"
                 }else {
@@ -521,9 +521,9 @@ function create_META_VIEW(BookData){ //BUILD METACARD DISPLAY
 
         let metaCardVID = null;
         let metaCardVIDBTN = null;
-        if(BookData.VIDPATH){ //SOUND-FLAG, render AUDIO-DISPLAY
+        if(ViewData.VIDPATH){ //SOUND-FLAG, render AUDIO-DISPLAY
             metaCardVID = document.createElement('video'); //MP3
-            metaCardVID.src = BookData.VIDPATH; //: "https://storage.opensea.io/files/2917253280b68adf480bbb4493d881c3.mp3"
+            metaCardVID.src = ViewData.VIDPATH; //: "https://storage.opensea.io/files/2917253280b68adf480bbb4493d881c3.mp3"
             metaCardVID.style.padding = "0.888em"
             metaCardVID.style.width = "100%"
             metaCardVID.style.maxWidth = "33em"
@@ -550,20 +550,20 @@ function create_META_VIEW(BookData){ //BUILD METACARD DISPLAY
         }
 
         let metaUTubeVID = null;
-        if(BookData.UTOOBZ){ //-FLAG,-DISPLAY
+        if(ViewData.UTOOBZ){ //-FLAG,-DISPLAY
             metaUTubeVID = document.createElement('aside'); //MP3
-            metaUTubeVID.innerHTML = `${BookData.UTOOBZ}`
+            metaUTubeVID.innerHTML = `${ViewData.UTOOBZ}`
             metaUTubeVID.style.width = "100%"
         }
 
 
 
         let metaCardSND = null;
-        if(BookData.SONICPATH){ //SOUND-FLAG, render AUDIO-DISPLAY
+        if(ViewData.SONICPATH){ //SOUND-FLAG, render AUDIO-DISPLAY
             metaCardSND = document.createElement('video'); //MP3
-            metaCardSND.src = BookData.SONICPATH; //: "https://storage.opensea.io/files/2917253280b68adf480bbb4493d881c3.mp3"
-            // metaCardSND.src = BookData.meta.main.snd; //: "https://storage.opensea.io/files/2917253280b68adf480bbb4493d881c3.mp3"
-            // metaCardSND.src = BookData.animation_original_url; //: "https://storage.opensea.io/files/2917253280b68adf480bbb4493d881c3.mp3"
+            metaCardSND.src = ViewData.SONICPATH; //: "https://storage.opensea.io/files/2917253280b68adf480bbb4493d881c3.mp3"
+            // metaCardSND.src = ViewData.meta.main.snd; //: "https://storage.opensea.io/files/2917253280b68adf480bbb4493d881c3.mp3"
+            // metaCardSND.src = ViewData.animation_original_url; //: "https://storage.opensea.io/files/2917253280b68adf480bbb4493d881c3.mp3"
             metaCardSND.style.padding = "0.888em"
             metaCardSND.style.width = "100%"
             metaCardSND.style.maxWidth = "28em"
@@ -574,15 +574,42 @@ function create_META_VIEW(BookData){ //BUILD METACARD DISPLAY
             metaCardSND.controls = true;
         }
         // let metaCardLINK = document.createElement('a'); //IMG LINK parent
-        // metaCard.src = BookData.url
+        // metaCard.src = ViewData.url
         //MAINTITLE
         let metaCardMainTitle = document.createElement('section'); //Title 1
         metaCardMainTitle.style.padding = "0.444em"
         metaCardMainTitle.style.borderRadius = "13px"
+        metaCardMainTitle.style.cursor = "pointer"
         // metaCardMainTitle.style.marginTop = "3em"
         metaCardMainTitle.style.border = "1px solid steelblue"
-        metaCardMainTitle.innerText = BookData.id; //NAME
+        if(ViewData.title){ //TODO this should all be TITLE not ID.
+            metaCardMainTitle.innerText = ViewData.title; //NAME
+        } else {
+            metaCardMainTitle.innerText = ViewData.id; //NAME
+        }
         metaCardMainTitle.style.backgroundColor = "#05112a"
+        metaCardMainTitle.addEventListener("click", ()=> {
+            if(metaCardMainTitle.style.height === "20em"){ //minimize
+            //     metaCardMainTitle.style.width = "44%"
+                metaCardMainTitle.style.height = 'auto';
+                metaCardMainTitle.style.overflowY = 'auto';
+
+            }else {
+
+                metaCardMainTitle.style.height = '20em';
+                metaCardMainTitle.style.overflowY = 'scroll';
+
+            //     metaCardMainTitle.style.width = "100%"
+            }
+            // } else {
+            //     metaCardVIDBTN.style.display = 'flex';//'none';
+            //     metaCardIMG.style.cssText = 'height:auto; width:auto; max-width:22em;cursor:pointer;';//'height:12em;width:auto'
+            //     metaCardVID.style.display = 'none';
+            // }   
+        })
+
+
+
         //SUBTITLE
         let metaCardSubTitle = document.createElement('section'); //Title 2
         metaCardSubTitle.style.padding = "0.111em"
@@ -611,7 +638,7 @@ function create_META_VIEW(BookData){ //BUILD METACARD DISPLAY
         let UP = document.createElement('aside'); //super
         let TL = document.createElement('aside'); //super
         TR.innerHTML = "<span>\\</span>"
-        UP.innerHTML = `<span>${BookData.id}</span>`
+        UP.innerHTML = `<span>${ViewData.id}</span>`
         TL.innerHTML = "<span>/</span>"
 
         //INSERT INTO DOM-.
