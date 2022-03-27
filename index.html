@@ -146,7 +146,52 @@
                 margin-bottom: 1em;
             }
       </style>
+    <style>
+.txtFrameScroll{
+	float: left;
+	height: 300px;
+	width: 100%;
+	background: #05112a;
+	overflow-y: scroll;
+	margin-bottom: 1em;
+}
+.txtFrameOverflow{
+	min-height: 450px;
+}
 
+/* .txtFrameWrapper
+{
+	text-align: center;
+	width: 500px;
+	margin: auto;
+} */
+
+.blueScroll::-webkit-scrollbar-track
+{
+	box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #05112a;
+	border-radius: 10px;
+}
+
+.blueScroll::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #05112a;
+}
+
+.blueScroll::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	background-image: -webkit-gradient(linear,
+									   left bottom,
+									   left top,
+									   color-stop(0.44, rgb(122,153,217)),
+									   color-stop(0.72, rgb(73,125,189)),
+									   color-stop(0.86, rgb(28,58,148)));
+}
+
+    </style>
 <!-- TOP MENU -->
 <section id="topMenuFrame" style="padding: 0.444em; display:none;">
     <!-- <span style="font-weight:bold; font-family:impact; color:steelblue; letter-spacing:0.222em;text-shadow: 1px 1px 1px white;">EPICs:</span> -->
