@@ -457,14 +457,14 @@ function create_ITEM_VIEW(itemIDX){ // show individual ITEM.
     // VIDPATH: 'https://youtu.be/ZXFtQ73RNBQ',
     let item_METADATA = { 
     '0.0.0':{ title: 'Virtual Wurldz!',
-    IMGPATH:'./copyrightNetCinematics/KRYPTOVIDZ/img1.png',
+    IMGPATH:'./copyrightNetCinematics/KRYPTOVIDZ/SpazeTitle2_ORBY_SQ_1.png',
             UTOOBZ: `<iframe width="100%" height="315" src="https://www.youtube.com/embed/ZXFtQ73RNBQ" 
             title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
             encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
          `,
             sNUM:0, eNUM:0,mainTTL:'COZMOSPAZE!',subTTL:'Virtual~Wurldz...',
-            INFO:'EDM MUSIC VIDEO | COZMOZPAZE | promo 0',
-            id:'0.0.0'
+            INFO:'EDM MUSIC VIDEO | COZMOZPAZE | promo',
+            id:'PROMO',TXT_ML:'Made in Dreams PS5'
         }
     }
     let display_ITEM = item_METADATA['0.0.0'];
