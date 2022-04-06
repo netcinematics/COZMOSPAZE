@@ -456,7 +456,7 @@ function create_ITEM_VIEW(itemIDX){ // show individual ITEM.
     // IMGPATH: './copyrightNetCinematics/KRYPTOVIDZ/SpazeTitle1.png',
     // VIDPATH: 'https://youtu.be/ZXFtQ73RNBQ',
     let item_METADATA = { 
-    '0.0.0':{ title: 'Virtual Wurldz!',
+    '1.0.0':{ title: 'Virtual Wurldz!',
     IMGPATH:'./copyrightNetCinematics/KRYPTOVIDZ/SpazeTitle2_ORBY_SQ_1.png',
             UTOOBZ: `<iframe width="100%" height="315" src="https://www.youtube.com/embed/ZXFtQ73RNBQ" 
             title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
@@ -467,7 +467,7 @@ function create_ITEM_VIEW(itemIDX){ // show individual ITEM.
             id:'PROMO',TXT_ML:'Made in Dreams PS5'
         }
     }
-    let display_ITEM = item_METADATA['0.0.0'];
+    let display_ITEM = item_METADATA['1.0.0'];
     create_META_VIEW(display_ITEM)
     kbz.MainVw.item_idx = null; //reset menu to work
 
