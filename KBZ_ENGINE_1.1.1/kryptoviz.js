@@ -452,6 +452,7 @@ function create_UTOOB_VIEW(){ // show ALL YOUTUBE VIDS
 
 }
 function create_ITEM_VIEW(itemIDX){ // show individual ITEM.
+    console.log('Loading ITEM:',itemIDX)
     // VIDPATH: './copyrightNetCinematics/KRYPTOVIDZ/COZMO_PROMO_3b.mp4',
     // IMGPATH: './copyrightNetCinematics/KRYPTOVIDZ/SpazeTitle1.png',
     // VIDPATH: 'https://youtu.be/ZXFtQ73RNBQ',
