@@ -73,7 +73,7 @@ function initPage(){
 
                 return;
             }
-            if(mode===1){// gallery
+            if(mode===1){// gallery - initialized on load
                 clearAllDisplays();
                 if (ui.GalleryDISPLAYFRAME1) {ui.onGalleryView = true; 
                     ui.GalleryDISPLAYFRAME1.style.display = 'block'; }
@@ -231,7 +231,7 @@ const METANET = { //ATTRIBUTE OVERRIDES BY TOKEN ID,
         }
         if (KRYPTOBOOKFrame1) { KRYPTOBOOKFrame1.innerHTML = ""; } //BLANK data view-.
         let aBOOK = METANET_BOOKZ[CID];
-        showKRYPTOBOOK_All(aBOOK, [])
+        showKRYPTOBOOK_All(aBOOK, []) //todo move  above to MAIN SWITCH
     }
 
 }  //END MASSIVE INITPAGE FN. //todo move above krypto fns?
@@ -259,7 +259,7 @@ let SPAZEBOOK_KRYPTOBITZ1 = [
     {IDX:'1.4.1',
      IMG:"./copyrightNetCinematics/KRYPTOBOOKZ/2022_ORIGINZ_BITZ/originz_IMGBIT1.4.1_recharg3.png"},
     {IDX:'1.5',
-     IMG:"./copyrightNetCinematics/KRYPTOBOOKZ/2022_ORIGINZ_BITZ/originz_IMGBIT1.5_spazeboard2.png",
+     IMG:"./copyrightNetCinematics/KRYPTOBOOKZ/2022_ORIGINZ_BITZ/originz_IMGBIT1.5_spazeboard3.png",
      TXT:"./copyrightNetCinematics/KRYPTOBOOKZ/2022_ORIGINZ_BITZ/originz_bit1.5_spazeboard_5x4_TXT.png"},
     {IDX:'1.6',
      IMG:"./copyrightNetCinematics/KRYPTOBOOKZ/2022_ORIGINZ_BITZ/originz_IMGBIT1.6_mombot1.png",
@@ -384,14 +384,8 @@ function showKRYPTO_Page(idx, data){
  * SHOW KRYPTO BOOK ALL
  \********************************************************************/
 function showKRYPTOBOOK_All(bitz, metanet1){
-    //TODO this is the layer for 9GRID Integration (links visibility behavior, etc)
-    //TODO that, make the showBitz config object a wrapper around the contentBitz.
-    //TODO then, extend the IDX to pinata IPFS lookup of METANET obj.
-    let showbitz = {}
-    //TODO solve IMGNOTXT and INTROBITZ TITLEBITZ and ENDBITZ and OUTROBITZ
-    //TODO SOLVE spacer "welcome" and 1|10 10|10
-    //TODO metanet has showbitz
 
+    let showbitz = {}
 
     //Loop all the pages and render free scroll...
     for(let i=0; i<bitz.length;i++){
@@ -432,30 +426,24 @@ function toggleSound(toggleOn){
 }
 function loadGalleryView(){ //
     let galleryITEMS = [
-        {sNUM:'S1',eNUM:'EP2',mainTTL:'TRIAL of OrbyOrbot',subTTL:'MomBot, I fail you.',info:'made in Dreams',
-          CID:'s1.e1',
-          IMGPATH:'copyrightNetCinematics/MAIN_GALLERY/img0.png',
-          VIDPATH:'copyrightNetCinematics/KRYPTOVIDZ/EP1.V11_remaster2021.mp4',
-          LINKPATH:'',
-          INFO:'buncha stuff, buncha buncha stuff'},
-        {sNUM:'S1',eNUM:'EP1',mainTTL:'ORBOT~ORIGINZ',subTTL:'Go find your Dad for me!',info:'made in Dreams',
+        {sNUM:'S1',eNUM:'EP1',mainTTL:'ORBOT~ORIGINZ',subTTL:'Go find your Dad for me!',
           CID:'s1.e1',
           IMGPATH:'copyrightNetCinematics/MAIN_GALLERY/originz_TITLEBIT1.png',
           VIDPATH:'copyrightNetCinematics/KRYPTOVIDZ/EP2PROD2a.mp4',
           LINKPATH:'',
-          INFO:'buncha stuff, buncha buncha stuff'},
-        {sNUM:'S2',eNUM:'EP3',mainTTL:'Search NORTH~CRATER~LAKE',subTTL:'THE SPAZECRASH!!!',info:'made in VR',
-          CID:'s1.e3',
-          IMGPATH:'copyrightNetCinematics/MAIN_GALLERY/img3.png',
-          VIDPATH:'copyrightNetCinematics/KRYPTOVIDZ/AcozmoScapeE3V7.mp4',
-          LINKPATH:'',
-          INFO:'buncha stuff, buncha buncha stuff'},
-        {sNUM:'S2',eNUM:'EP6',mainTTL:'Lost in EAST~DUNE~SEA',subTTL:'BadBUGZ!?!',info:'made in Dreams',
+          INFO:'Made in DREAMS PS5'},
+        {sNUM:'S1',eNUM:'EP5',mainTTL:'TRIAL of OrbyOrbot',subTTL:'Over Eastern Ridge.',
           CID:'s1.e1',
-          IMGPATH:'copyrightNetCinematics/MAIN_GALLERY/img6.png',
+          IMGPATH:'copyrightNetCinematics/MAIN_GALLERY/img5.png',
+          VIDPATH:'copyrightNetCinematics/KRYPTOVIDZ/EP1.V11_remaster2021.mp4',
+          LINKPATH:'',
+          INFO:'Made in DREAMS PS5'},
+        {sNUM:'S2',eNUM:'EP6',mainTTL:'Lost in EAST~DUNE~SEA',subTTL:'BadBUGZ!?!',
+          CID:'s1.e1',
+          IMGPATH:'copyrightNetCinematics/MAIN_GALLERY/img6b.png',
           VIDPATH:'copyrightNetCinematics/KRYPTOVIDZ/EP6.V6.mp4',
           LINKPATH:'',
-          INFO:'buncha stuff, buncha buncha stuff'},
+          INFO:'Made in DREAMS PS5'},
     ];
     
     ui.GalleryDISPLAYFRAME1.innerHTML = '';
@@ -463,7 +451,7 @@ function loadGalleryView(){ //
     let galleryViewMarkup=`
         <header id="pageTitle" style="padding:0.666em;">
             <section style="margin: 0.222em;">
-                <span class="pageTitleTXT" style=" text-shadow: 6px 1px 14px purple;">KRYPTOBOOKZ</span><span class="tradeMark">&trade;</span>
+                <span class="pageTitleTXT" style=" text-shadow: 6px 1px 14px purple;">COZMOBOOKZ</span><span class="tradeMark">&trade;</span>
             </section>
         </header>
     `;
@@ -477,11 +465,10 @@ function loadGalleryView(){ //
                     <section class='galleryINFO_short'>
                         <span>${galleryITEM.sNUM}&nbsp;|&nbsp;${galleryITEM.mainTTL}</span><br>
                         <span>${galleryITEM.eNUM}&nbsp;|&nbsp;${galleryITEM.subTTL}</span><br>
-                        <span>INFO:${galleryITEM.INFO}</span>
                     </section>
                     <section class='galleryINFO_long' style='display:none'>
                         <span>${galleryITEM.sNUM}&nbsp;|&nbsp;${galleryITEM.mainTTL}</span><br>
-                        <span>${galleryITEM.eNUM}&nbsp;|&nbsp;${galleryITEM.subTTL}</span><br>
+                        <span>${galleryITEM.eNUM}&nbsp;|&nbsp;${galleryITEM.subTTL}</span><br><hr>
                         <span>INFO:${galleryITEM.INFO}</span>
                         <div onclick='galleryPlayClick(event,"${galleryITEM.CID}")' class="hoverGlow" style="border-radius:100%; background:grey; padding: 0.444em;box-shadow:-2px 0px 2px 2px deepskyblue;
                             width:2em;height:2em;margin: 0 auto;margin-right: 0;">
