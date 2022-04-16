@@ -70,6 +70,23 @@
 
         hr{ border: 1px solid blue; margin: 2em; }
 
+
+        .grid9BTN {
+            font-size:0.8em;   
+            cursor:pointer;   
+            padding: 0.222em;
+            border-radius: 100%;
+        }
+        .grid9BTN:hover{
+            color:skyblue;
+            border: 1px solid #8f7d71;
+            box-shadow: 1px 1px 7px 2px skyblue;
+        }
+        .grid9BTN:active{
+            border: 2px solid #e0b99f;
+            box-shadow: 2px 2px 7px 2px rgb(174, 216, 233);
+        }
+
     </style>
 </head>
 <body>
@@ -86,6 +103,10 @@
         .sonicOff{ box-shadow: 0px 0px 6px red !important; }
 
         .steelNeonIconBtn {
+            display: flex;
+    			justify-content: space-around;
+                align-items: center;
+
                 font-family: verdana;
             font-size: 1.3em;
             border: #748696 solid 1px;
@@ -222,7 +243,6 @@
 <button id="mainUPBTN" class="steelNeonIconBtn disabledBTN" style='display:none;position:fixed;top:50%;left:1%;z-index:1111'><i class="fa fa-chevron-circle-up" style="font-size:1em;"></i></button>
 <button id="mainDWNBTN" class="steelNeonIconBtn glowBTN" style='display:none;position:fixed;top:50%;right:1%;z-index:1111'><i class="fa fa-chevron-circle-down" style="font-size:1em;"></i></button>
 <button id="mainSONICBTN" class="steelNeonIconBtn hoverGlow sonicOff" style='position:fixed;top:1%;right:0.5%;z-index:1111'><i class="fa fa-volume-off" style="font-size:1em;"></i></button>
-<!-- <button id="mainSONICBTN" class="steelNeonIconBtn hoverGlow sonicOff" style='position:fixed;top:16%;right:1%;z-index:1111'><i class="fa fa-volume-off" style="font-size:1em;"></i></button> -->
 
 <a href="https://linktr.ee/spazefalcon" target="_blank">
     <img src="./images/linktree.png" class="hoverGlow" style="width:2em;border-radius:100%;position:fixed;bottom:10%;right: 1%;border: 2px solid white;
@@ -236,7 +256,8 @@
     <img src="./images/instablue.png" class="hoverGlow" style="width:2em;border-radius:100%;position:fixed;bottom:10%;left: 1%;border: 2px solid white;
     padding: 1px;"/></a>
 <!-- <aside id="mainPageNums" style='position:fixed;bottom:44%;right:1.444em;z-index:1111;font-size: 0.666em;'></aside> -->
-<aside id="mintDate" style='position:fixed;bottom:1%;right:1%;z-index:1111;font-size: 0.666em;font-style: italic;'>1-<script>document.write( new Date().getFullYear() );</script></aside>
+<aside id="mintDate" style='position:fixed;bottom:1%;right:1.333%;z-index:1111;font-size: 0.444em;font-style: italic;'>©<script>document.write( new Date().getFullYear() );</script></aside>
+<aside style='position:fixed;bottom:1%;left:0.444%;z-index:1111;font-size: 0.444em;font-style: italic;'>@spazefalcon</aside>
 <article>
     <section id="GalleryDISPLAYFRAME1" style="display:none; padding:0.222em; border:1px solid darkslateblue; border-radius:13px; width:85%; margin:0 auto; border-radius:22px; max-width: 44em;"> </section>
     <section id="itemDISPLAYFRAME1" style="display:none; padding:0.222em; border:1px solid darkslateblue; border-radius:13px; width:85%; margin:0 auto; border-radius:22px; max-width: 44em;"> </section>
@@ -507,11 +528,18 @@ let clearAllDisplays = function(){
     // ui.lastView.style.display = 'block';
 }
 
-//TODO move to vis?
+
 let loadBOOKDisplay = function(CID){
 
     kbz.MainVw.runDISPLAYFactory(7,CID);
 }
+
+let clickGrid9BTN = function(btnType,idx){
+    if(btnType==='share' && idx){
+        window.open(`https://netcinematics.github.io/COZMOSPAZE/index.html?idx=${idx}`, "_blank");
+    }
+}
+
 
 document.addEventListener("DOMContentLoaded", ()=>{
   
@@ -520,12 +548,12 @@ document.addEventListener("DOMContentLoaded", ()=>{
     kbz.loadGalleryView();
     //dynamic NFT loading-.
     const urlParams = new URLSearchParams(window.location.search);
-    // let mode = parseInt(urlParams.get('m')); //mode for display
-    let mode = urlParams.get('m'); //mode for display
+    let mode = parseInt(urlParams.get('m')); //mode for display
     let idx = urlParams.get('idx'); //idx for specific items-.
     if(!idx){idx = null}
     kbz.MainVw.item_idx = idx;
-    if(!mode){mode = 1} //gallery
+    // if(!mode){mode = 1} //gallery
+    if(!mode){mode = 5} //vidz
     // if(!mode){mode = 7} //kryptobook
     // if(!mode){mode = 6} //display all
     kbz.MainVw.runDISPLAYFactory(mode); //default load

@@ -345,44 +345,22 @@ function create_UTOOB_VIEW(){ // show ALL YOUTUBE VIDS
             encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`,
             sNUM:0, eNUM:0,mainTTL:'COZMOSPAZE!',subTTL:'Virtual~Wurldz...',
             INFO:'EDM MUSIC VIDEO | COZMOZPAZE | promo 0',
-            TXT_ML:`abc 123 ...
-            abc 123 ...
-            abc 123 ...
-            abc 123 ...
-            abc 123 ...
-            abc 123 ...
-            abc 123 ...
-            abc 123 ...
-            abc 123 ...
-            abc 123 ...
-            abc 123 ...
-            abc 123 ...<br>
-            abc 123 ...
-            abc 123 ...
-            abc 123 ...
-            abc 123 ...
-            abc 123 ...
-            abc 123 ...
-            abc 123 ...
-            abc 123 ...
-            abc 123 ...
-            abc 123 ...
-            abc 123 ...
-            abc 123 ...<br>
-            abc 123 ...
-            abc 123 ...
-            abc 123 ...
-            abc 123 ...
-            abc 123 ...
-            abc 123 ...
-            abc 123 ...
-            abc 123 ...
-            abc 123 ...
-            abc 123 ...
-            abc 123 ...
-            abc 123 ...<br>
+            SHARELINK:'1.0.0',
+            TXT_ML:`
+               <strong>PROMO MUSIC VIDEO:</strong> <br><br>
+               Virtual~Wurldz from the metaverse for you! <br>
+               Video Animations, EDM MUSIC, and SciFi STORY...<br>
+               <i>by digital artist spazefalcon.</i>
             `,
             id:'0.0.0'
+        },
+        { title: 'Into EAST~DUNE~SEA',
+            IMGPATH:'./copyrightNetCinematics/KRYPTOVIDZ/img6.png',
+            UTOOBZ: `<iframe width="100%" height="315" src="https://www.youtube.com/embed/M1-hZgIlAkc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`,
+            sNUM:0, eNUM:0,mainTTL:'COZMOSPAZE!',subTTL:'Virtual~Wurldz...',
+            INFO:'EDM MUSIC VIDEO | COZMOZPAZE | promo 0',
+            TXT_ML:' ...',
+            id:'0.0.7'
         },
         { title: 'OrbyOrbot ORIGIN~STORY',
             IMGPATH:'./copyrightNetCinematics/KRYPTOVIDZ/originz_TITLEBIT1.png',
@@ -390,7 +368,7 @@ function create_UTOOB_VIEW(){ // show ALL YOUTUBE VIDS
             // UTOOBZ: `<iframe width="100%" height="315" src="https://www.youtube.com/embed/i9MpeCOyIH0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`,
             sNUM:0, eNUM:0,mainTTL:'COZMOSPAZE!',subTTL:'Virtual~Wurldz...',
             INFO:'EDM MUSIC VIDEO | COZMOZPAZE | promo 0',
-            TXT_ML:'abc 123 ...',
+            TXT_ML:' ...',
             id:'0.0.1'
         },
         { title: 'MISSION to MARZAMOON',
@@ -398,7 +376,7 @@ function create_UTOOB_VIEW(){ // show ALL YOUTUBE VIDS
             UTOOBZ: `<iframe width="100%" height="315" src="https://www.youtube.com/embed/i9MpeCOyIH0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`,
             sNUM:0, eNUM:0,mainTTL:'COZMOSPAZE!',subTTL:'Virtual~Wurldz...',
             INFO:'EDM MUSIC VIDEO | COZMOZPAZE | promo 0',
-            TXT_ML:'abc 123 ...',
+            TXT_ML:' ...',
             id:'0.0.3'
         },
         { title: 'NORTH~CRATER~LAKE',
@@ -406,7 +384,7 @@ function create_UTOOB_VIEW(){ // show ALL YOUTUBE VIDS
             UTOOBZ: `<iframe width="100%" src="https://www.youtube.com/embed/l4pfJpzGE4M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`,
             sNUM:0, eNUM:0,mainTTL:'COZMOSPAZE!',subTTL:'Virtual~Wurldz...',
             INFO:'EDM MUSIC VIDEO | COZMOZPAZE | promo 0',
-            TXT_ML:'abc 123 ...',
+            TXT_ML:' ...',
             id:'0.0.4'
         },
         { title: 'SPAZE~CRASH!',
@@ -414,7 +392,7 @@ function create_UTOOB_VIEW(){ // show ALL YOUTUBE VIDS
             UTOOBZ: `<iframe width="100%" src="https://www.youtube.com/embed/kAZATuX1w-E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`,
             sNUM:0, eNUM:0,mainTTL:'COZMOSPAZE!',subTTL:'Virtual~Wurldz...',
             INFO:'EDM MUSIC VIDEO | COZMOZPAZE | promo 0',
-            TXT_ML:'abc 123 ...',
+            TXT_ML:' ...',
             id:'0.0.5'
         },
         { title: 'SANDSTORM on MARZAMOON',
@@ -422,7 +400,7 @@ function create_UTOOB_VIEW(){ // show ALL YOUTUBE VIDS
             UTOOBZ: `<iframe width="100%" src="https://www.youtube.com/embed/PxQqCfMEQKM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`,
             sNUM:0, eNUM:0,mainTTL:'COZMOSPAZE!',subTTL:'Virtual~Wurldz...',
             INFO:'EDM MUSIC VIDEO | COZMOZPAZE | promo 0',
-            TXT_ML:'abc 123 ...',
+            TXT_ML:' ...',
             id:'0.0.5'
         },
         { title: 'Over EASTERN~RIDGE',
@@ -430,16 +408,8 @@ function create_UTOOB_VIEW(){ // show ALL YOUTUBE VIDS
             UTOOBZ: `<iframe width="100%" height="315" src="https://www.youtube.com/embed/i9MpeCOyIH0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`,
             sNUM:0, eNUM:0,mainTTL:'COZMOSPAZE!',subTTL:'Virtual~Wurldz...',
             INFO:'EDM MUSIC VIDEO | COZMOZPAZE | promo 0',
-            TXT_ML:'abc 123 ...',
+            TXT_ML:' ...',
             id:'0.0.6'
-        },
-        { title: 'Into EAST~DUNE~SEA',
-            IMGPATH:'./copyrightNetCinematics/KRYPTOVIDZ/img6.png',
-            UTOOBZ: `<iframe width="100%" height="315" src="https://www.youtube.com/embed/M1-hZgIlAkc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`,
-            sNUM:0, eNUM:0,mainTTL:'COZMOSPAZE!',subTTL:'Virtual~Wurldz...',
-            INFO:'EDM MUSIC VIDEO | COZMOZPAZE | promo 0',
-            TXT_ML:'abc 123 ...',
-            id:'0.0.7'
         },
     ]
     
@@ -640,13 +610,13 @@ function create_META_VIEW(ViewData){ //BUILD METACARD DISPLAY - for MANY types o
         metaCardSuperTitle.style.justifyContent = "space-between";
         metaCardSuperTitle.style.marginTop =  "-0.444em";
         metaCardSuperTitle.style.paddingBottom = "0.888em";
-        //THREE-PART-SUPER-TITLE
+        //9GRID - TITLE - THREE-PART-SUPER-TITLE
         let TR = document.createElement('aside'); //super
         let UP = document.createElement('aside'); //super
         let TL = document.createElement('aside'); //super
         TR.innerHTML = "<span>\\</span>"
         UP.innerHTML = `<span>${ViewData.id}</span>`
-        TL.innerHTML = "<span>/</span>"
+        TL.innerHTML = (ViewData.SHARELINK)?`<i class="fa fa-share grid9BTN" onclick="clickGrid9BTN('share','${ViewData.SHARELINK}')"></i>`:"<span>/</span>";
 
         //INSERT INTO DOM-.
         if (metaCard && metaCardVID) { metaCard.insertAdjacentElement('afterbegin', metaCardVID); }
